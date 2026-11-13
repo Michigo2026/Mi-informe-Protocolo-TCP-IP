@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe - Protocolo TCP/IP - UNEFA</title>
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+
+    <!-- ================= HOJA 1: PORTADA ================= -->
+    <div class="hoja portada">
+        <header class="encabezado">
+            <div class="logo-izq">
+                <img src="Logo-Unefa.png" alt="Escudo UNEFA">
+            </div>
+            <div class="texto-institucional">
+                <p>República Bolivariana de Venezuela</p>
+                <p>Ministerio del Poder Popular Para la Defensa</p>
+                <p>Universidad Nacional Experimental Politécnica de la</p>
+                <p>Fuerza Armada Nacional</p>
+                <p>UNEFA - Núcleo Guárico</p>
+                <p>Ingeniería de Sistemas - VIII Semestre</p>
+            </div>
+            <div class="logo-der">
+                <img src="Logo-Unefa.png" alt="Escudo UNEFA">
+            </div>
+        </header>
+
+        <main class="titulo-principal">
+            <h1>Protocolo<br>TCP/IP</h1>
+        </main>
+
+        <footer class="pie-portada">
+            <div class="columna-izquierda">
+                <strong>Profesor:</strong>
+                <p>Raul Blanco</p>
+            </div>
+            <div class="columna-derecha">
+                <strong>Bachiller:</strong>
+                <p>Michael González</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ================= HOJA 2: DEFINICIÓN Y ORIGEN ================= -->
+    <div class="hoja contenido">
+        <h2>Definición</h2>
+        <p>El protocolo TCP/IP, cuyo nombre proviene de sus dos protocolos principales, Transmission Control Protocol (TCP) e Internet Protocol (IP), constituye la base fundamental sobre la que se sustenta el funcionamiento de Internet y de la mayoría de las redes modernas. A diferencia de lo que su nombre podría sugerir, TCP/IP no es un único protocolo, sino un conjunto o suite de protocolos de comunicación organizados en capas, que permite que dispositivos de diferentes fabricantes, sistemas operativos y ubicaciones geográficas puedan intercambiar información de manera ordenada, fiable y eficiente.</p>
+
+        <h2>Origen</h2>
+        <p>Su origen se remonta a la década de 1970, cuando la Agencia de Proyectos de Investigación Avanzada de Defensa de los Estados Unidos (DARPA) buscaba un sistema de comunicación capaz de mantener la interconexión incluso ante fallos parciales de la red, lo que dio lugar a ARPANET y posteriormente a la arquitectura que hoy conocemos. Su diseño se pensó para ser abierto, escalable e independiente del medio físico, lo que le permitió imponerse sobre otros modelos como OSI y convertirse en el estándar de facto para la comunicación global.</p>
+        <div class="numero-pagina">1</div>
+    </div>
+
+    <!-- ================= HOJA 3: ESTRUCTURA POR CAPAS ================= -->
+    <div class="hoja contenido">
+        <h2>Estructura por Capas</h2>
+        <p>El modelo TCP/IP se estructura tradicionalmente en cuatro capas, las cuales, aunque conceptualmente similares al modelo OSI de siete capas, presentan una simplificación orientada a la implementación práctica. En la base se encuentra la capa de acceso a la red, encargada de la transmisión física de los datos a través del medio, ya sea cableado, fibra óptica o inalámbrico, y de la interacción con el hardware de red como tarjetas Ethernet y routers de acceso.</p>
+        <p>Sobre ella se sitúa la capa de Internet, cuyo protocolo central es IP, responsable del direccionamiento lógico y del enrutamiento de los paquetes a través de distintas redes hasta su destino, utilizando direcciones IP de 32 bits en su versión 4 y de 128 bits en su versión 6, así como de la fragmentación y reensamblado de datagramas cuando es necesario.</p>
+        <p>La siguiente capa es la de transporte, donde operan TCP y UDP con funciones complementarias pero distintas, ya que TCP ofrece una comunicación orientada a conexión, fiable, con control de flujo y control de errores mediante acuses de recibo y retransmisiones, mientras que UDP proporciona una comunicación no orientada a conexión, más rápida y ligera, ideal para aplicaciones donde la velocidad prima sobre la fiabilidad, como la transmisión de video en tiempo real o los juegos en línea.</p>
+        <p>Finalmente, en la parte superior se encuentra la capa de aplicación, que engloba los protocolos que interactúan directamente con el usuario y los programas, entre los que destacan HTTP y HTTPS para la web, FTP para la transferencia de archivos, SMTP y POP3 para el correo electrónico, y DNS para la resolución de nombres de dominio.</p>
+        <div class="numero-pagina">2</div>
+    </div>
+
+    <!-- ================= HOJA 4: FUNCIONAMIENTO ================= -->
+    <div class="hoja contenido">
+        <h2>Funcionamiento</h2>
+        <p>El funcionamiento de TCP/IP se basa en el proceso de encapsulamiento, en el cual cada capa añade su propia cabecera a los datos recibidos de la capa superior, generando una unidad de datos que es tratada por la siguiente capa inferior, hasta que finalmente se convierte en bits transmitidos por el medio físico. En el destino ocurre el proceso inverso, de desencapsulamiento, donde cada capa retira su cabecera correspondiente y entrega los datos a la capa superior hasta llegar a la aplicación.</p>
+        <p>Este mecanismo, sumado al direccionamiento jerárquico y al enrutamiento dinámico, permite que la información pueda atravesar múltiples redes intermedias sin que el emisor y el receptor necesiten conocer la topología completa de la ruta. Además, el protocolo IP se caracteriza por ser no orientado a conexión y de mejor esfuerzo, lo que significa que no garantiza la entrega, el orden ni la ausencia de duplicados, siendo TCP el encargado de compensar estas limitaciones cuando la aplicación requiere fiabilidad, mediante la numeración de segmentos, la ventana deslizante y los mecanismos de control de congestión.</p>
+        <div class="numero-pagina">3</div>
+    </div>
+
+    <!-- ================= HOJA 5: IMPORTANCIA (Sola) ================= -->
+    <div class="hoja contenido">
+        <h2>Importancia</h2>
+        <p>La importancia de TCP/IP radica en que es el estándar universal que hace posible Internet. Sin este conjunto de protocolos no existiría una comunicación común entre redes heterogéneas, ya que es el que permite que un teléfono en Venezuela pueda comunicarse con un servidor en Japón sin importar el fabricante o el sistema operativo.</p>
+        <p>Su diseño descentralizado y tolerante a fallos garantiza que la red siga funcionando aunque parte de ella colapse, lo que fue su objetivo militar original y hoy es la base de la estabilidad global. Además, su carácter abierto y escalable ha permitido el crecimiento exponencial de dispositivos conectados, desde computadoras hasta teléfonos, televisores y sistemas IoT, y ha impulsado el desarrollo de la economía digital, la educación virtual, la telemedicina y el comercio electrónico.</p>
+        <p>Su naturaleza modular ha facilitado la evolución tecnológica, permitiendo la incorporación de nuevos protocolos de aplicación sin necesidad de modificar las capas inferiores, así como la transición progresiva de IPv4 a IPv6 para solventar el agotamiento de direcciones.</p>
+        <div class="numero-pagina">4</div>
+    </div>
+
+    <!-- ================= HOJA 6: CONCLUSIÓN (Sola) ================= -->
+    <div class="hoja contenido">
+        <h2>Conclusión</h2>
+        <p>En síntesis, el protocolo TCP/IP representa mucho más que un conjunto de reglas técnicas, es el lenguaje común que posibilita la interconexión global y el fundamento sobre el cual se han construido los servicios digitales contemporáneos. Su estructura por capas, su capacidad de adaptación y su enfoque en la fiabilidad y la eficiencia han demostrado ser acertados a lo largo de más de cuatro décadas de uso continuo.</p>
+        <div class="numero-pagina">5</div>
+    </div>
+
+</body>
+</html>
